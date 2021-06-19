@@ -45,7 +45,7 @@ const TestComponent: React.FC = () => {
 ### With redux
 
 ```
-import { createEventRReducer } from 'react-eventr'
+import { createEventRReducer, addNewEvent } from 'react-eventr'
 
 export const makeStore = () => {
   const rootReducer = combineReducers({
@@ -76,7 +76,7 @@ const TestComponent: React.FC = () => {
       <button
         onClick={() =>
           dispatch(
-            EventsActions.addNewEvent({
+            addNewEvent({
               type: 'redux-event',
             })
           )

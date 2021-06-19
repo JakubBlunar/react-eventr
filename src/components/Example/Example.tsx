@@ -2,7 +2,7 @@ import React from 'react'
 import { combineReducers, createStore } from 'redux'
 import { Provider, useDispatch } from 'react-redux'
 import { createEventRReducer } from '../../redux'
-import { EventsActions } from '../../redux/actions'
+import { EventRActions } from '../../redux/actions'
 import { useEvent, useReduxEvent } from '../../hooks/useEvents'
 import { EventrProvider } from '../EventrProvider'
 import { useAddEvent } from '../../hooks/useAddEvent'
@@ -58,7 +58,7 @@ const TestComponent: React.FC = () => {
       <button
         onClick={() =>
           dispatch(
-            EventsActions.addNewEvent({
+            EventRActions.addEvent({
               type: REDUX_EVENT_TYPE,
             })
           )

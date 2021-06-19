@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { EventsActions } from '../actions'
+import { EventRActions } from '../actions'
 import { createEventRReducer } from '../reducer'
 import { NotificationState } from '../../types'
 import { HubEvent } from '../..'
@@ -18,7 +18,7 @@ describe('notifications reducer spec', () => {
       created: x == 0 ? new Date() : undefined,
     }))
 
-    const state = reducer(initState, EventsActions.addNewEvents(events))
+    const state = reducer(initState, EventRActions.addEvents(events))
 
     expect(state.hubEvents).toHaveLength(2)
 
