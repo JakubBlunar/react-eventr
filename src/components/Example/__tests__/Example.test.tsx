@@ -6,7 +6,7 @@ describe('Example Component', () => {
   it('Example renders', () => {
     const { container } = render(<Example />)
 
-    const node = container.querySelector('button.Example')
-    expect(node!.className).toEqual('Example')
+    const node = container.querySelector('button')
+    expect(node).toBeDefined()
   })
 })
