@@ -1,5 +1,15 @@
 # Changelog
 
+### [1.1.4](https://github.com/JakubBlunar/react-eventr/compare/v1.1.3...v1.1.4) (2021-06-19)
+
+
+### Bug Fixes
+
+* fix types and tests ([c432e20](https://github.com/JakubBlunar/react-eventr/commit/c432e20cb1ae8af53f6e5ea0f7da900688aaa5c9))
+* tests after refactoring of types ([299b91f](https://github.com/JakubBlunar/react-eventr/commit/299b91f1ffc8db549909bba88ae7137859f912c8))
+* **package:** changed exported types to interface and enum ([cb6e696](https://github.com/JakubBlunar/react-eventr/commit/cb6e69638a71503132797a256669514195722b90))
+* **package:** changed position of exported types for override ([5c9949e](https://github.com/JakubBlunar/react-eventr/commit/5c9949ec597241a7be6e40c6b77c4e8233f1ef19))
+
 ### [1.1.3](https://github.com/JakubBlunar/react-eventr/compare/v1.1.2...v1.1.3) (2021-06-19)
 
 
