@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.6](https://github.com/JakubBlunar/react-eventr/compare/v1.1.5...v1.1.6) (2021-06-19)
+
+
+### Bug Fixes
+
+* renamed action creators ([218c168](https://github.com/JakubBlunar/react-eventr/commit/218c1686f17fdd4d8e5224e8b60b1e3e9b6f4267))
+
 ### [1.1.5](https://github.com/JakubBlunar/react-eventr/compare/v1.1.4...v1.1.5) (2021-06-19)
 
 
