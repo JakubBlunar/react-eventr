@@ -27,7 +27,7 @@ jobs:
         run: yarn build
 
   publish:
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: test-lint-build
     runs-on: ubuntu-latest
     steps:
@@ -49,7 +49,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Release
-        env: 
+        env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
         run: npx semantic-release
