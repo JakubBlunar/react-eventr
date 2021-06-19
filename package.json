@@ -105,8 +105,7 @@
   },
   "release": {
     "branches": [
-      "master",
-      "next"
+      "main"
     ],
     "preset": "conventionalcommits",
     "plugins": [
