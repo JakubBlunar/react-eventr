@@ -5,9 +5,9 @@ export type HubEventBase<T = string, D = any> = {
   data: D
 }
 
-export type HubEvent = any
+export interface HubEvent {}
 
-export type HubEventType = string
+export enum HubEventType {}
 
 export type NotificationState = {
   hubEvents: HubEvent[]
