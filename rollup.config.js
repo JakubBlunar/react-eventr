@@ -1,11 +1,11 @@
-import typescript from 'rollup-plugin-typescript2';
-import { terser } from 'rollup-plugin-terser';
-import postcss from 'rollup-plugin-postcss';
-import commonjs from '@rollup/plugin-commonjs';
-import pkg from './package.json';
-import resolve from '@rollup/plugin-node-resolve';
-import copy from 'rollup-plugin-copy';
-import ts from 'typescript';
+import typescript from 'rollup-plugin-typescript2'
+import { terser } from 'rollup-plugin-terser'
+import postcss from 'rollup-plugin-postcss'
+import commonjs from '@rollup/plugin-commonjs'
+import pkg from './package.json'
+import resolve from '@rollup/plugin-node-resolve'
+import copy from 'rollup-plugin-copy'
+import ts from 'typescript'
 
 export default {
   input: './src/index.ts',
@@ -63,11 +63,11 @@ export default {
           transform: (content) => {
             const { scripts, devDependencies, husky, release, engines, ...keep } = JSON.parse(
               content.toString()
-            );
-            return JSON.stringify(keep, null, 2);
+            )
+            return JSON.stringify(keep, null, 2)
           },
         },
       ],
     }),
   ],
-};
+}

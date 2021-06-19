@@ -1,13 +1,13 @@
-import _ from 'lodash'
+import _, { Dictionary } from 'lodash'
 import { useContext, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { EventsContext } from '../context'
 import { getEvents } from '../redux/selectors'
-import { HubEvent, HubEventType } from '..'
+import { HubEventBase } from '../types'
 
-type Callback<T> = (event: Extract<HubEvent, { type: T }>) => void
+type Callback<T> = (event: HubEventBase<T>) => void
 
-export function useReduxEvents(callback: Callback<any>, events?: HubEventType[]) {
+export function useReduxEvents(callback: Callback<HubEventBase<any>>, events?: string[]) {
   const hubEvents = useSelector(getEvents)
   const lastEventTime = useRef<Date | undefined>(_.head(hubEvents)?.created)
 
@@ -26,11 +26,12 @@ export function useReduxEvents(callback: Callback<any>, events?: HubEventType[])
   }, [hubEvents])
 }
 
-export function useReduxEvent<T extends HubEventType>(callback: Callback<T>, event: T) {
+export function useReduxEvent<T extends Dictionary<unknown>>(callback: Callback<T>, event: string) {
+  // @ts-ignore
   useReduxEvents(callback, [event])
 }
 
-export function useEvents(callback: Callback<any>, events?: HubEventType[]) {
+export function useEvents(callback: Callback<HubEventBase<any>>, events?: string[]) {
   const context = useContext(EventsContext)
   const hubEvents = context.hubEvents || []
   const lastEventTime = useRef<Date | undefined>(_.head(hubEvents)?.created)
@@ -55,6 +56,7 @@ export function useEvents(callback: Callback<any>, events?: HubEventType[]) {
   }
 }
 
-export function useEvent<T extends HubEventType>(callback: Callback<T>, event: T) {
+export function useEvent<T extends Dictionary<unknown>>(callback: Callback<T>, event: string) {
+  // @ts-ignore
   return useEvents(callback, [event])
 }

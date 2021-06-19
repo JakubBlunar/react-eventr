@@ -1,11 +1,11 @@
-import { HubEvent } from '.'
-
-export type HubEventBase<T = string, D = any> = {
-  id: string
+export type HubEventBase<D = any> = {
+  id?: string
   created?: Date
-  type: T
-  data: D
+  type: string
+  data?: D
 }
+
+export type HubEvent = HubEventBase
 
 export type NotificationState = {
   hubEvents: HubEvent[]
