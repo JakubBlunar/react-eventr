@@ -1,4 +1,4 @@
-import { HubEvent } from '../types'
+import { HubEvent } from '..'
 import { createAction } from '../utils/redux'
 import { ActionsUnion } from '../utils/types'
 

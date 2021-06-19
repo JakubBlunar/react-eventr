@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
-import { HubEvent } from './types'
+import { HubEvent } from '.'
 
 type EventsContextValue = {
   hubEvents: HubEvent[]

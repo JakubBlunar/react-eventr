@@ -3,7 +3,7 @@ import { useContext, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { EventsContext } from '../context'
 import { getEvents } from '../redux/selectors'
-import { HubEvent, HubEventType } from '../types'
+import { HubEvent, HubEventType } from '..'
 
 type Callback<T> = (event: Extract<HubEvent, { type: T }>) => void
 

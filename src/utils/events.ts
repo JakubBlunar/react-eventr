@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { HubEvent } from '../types'
+import { HubEvent } from '..'
 
 export const createNewEvents = (oldEvents: HubEvent[], newEvents: HubEvent[], bufferSize: number) =>
   _.take(

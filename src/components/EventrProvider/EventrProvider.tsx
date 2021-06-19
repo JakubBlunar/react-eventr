@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { EventsContext } from '../../context'
-import { HubEvent } from '../../types'
+import { HubEvent } from '../..'
 import { createNewEvents } from '../../utils/events'
 
 type Props = {
