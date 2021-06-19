@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import { getEvents } from '../selectors'
-import { HubEvent } from '../../types'
+import { HubEvent } from '../..'
 
 describe('notification selector tests', () => {
   const events: HubEvent[] = _.times(2, (x) => ({
