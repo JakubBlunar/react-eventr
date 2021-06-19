@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/JakubBlunar/react-eventr/compare/v1.1.0...v1.1.1) (2021-06-19)
+
+
+### Bug Fixes
+
+* **package:** peer dependences updated ([66b21bf](https://github.com/JakubBlunar/react-eventr/commit/66b21bf0958c81408be2372afbf5573954144bb1))
+
 ## [1.1.0](https://github.com/JakubBlunar/react-eventr/compare/v1.0.0...v1.1.0) (2021-06-19)
 
 
