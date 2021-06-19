@@ -3,7 +3,7 @@ import { createEventRReducer } from '../reducer'
 import { createReduxModule } from '../..'
 
 describe('notifications reducer spec', () => {
-  const { EventRActions } = createReduxModule()
+  const { EventrActions } = createReduxModule()
 
   const reducer = createEventRReducer(10)
   const initState = {
@@ -18,7 +18,7 @@ describe('notifications reducer spec', () => {
       created: x == 0 ? new Date() : undefined,
     }))
 
-    const state = reducer(initState, EventRActions.addEvents(events))
+    const state = reducer(initState, EventrActions.addEvents(events))
 
     expect(state.hubEvents).toHaveLength(2)
 
@@ -35,7 +35,7 @@ describe('notifications reducer spec', () => {
       created: undefined,
     }
 
-    const state = reducer(initState, EventRActions.addEvent(event))
+    const state = reducer(initState, EventrActions.addEvent(event))
 
     expect(state.hubEvents).toHaveLength(1)
 

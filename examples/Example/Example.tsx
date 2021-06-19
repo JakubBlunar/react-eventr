@@ -9,7 +9,7 @@ import {
   HubEventBase,
 } from '../../src'
 
-export const makeStore = () => {
+const makeStore = () => {
   const rootReducer = combineReducers({
     eventr: createEventRReducer(),
   })

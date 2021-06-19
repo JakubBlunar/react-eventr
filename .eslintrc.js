@@ -14,12 +14,7 @@ module.exports = {
     },
     sourceType: 'module',
   },
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'prettier/@typescript-eslint',
-    'eslint-config-prettier',
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'prettier'],
   rules: {
     '@typescript-eslint/camelcase': rules.OFF,
     '@typescript-eslint/explicit-function-return-type': rules.OFF,
