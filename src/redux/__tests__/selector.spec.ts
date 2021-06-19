@@ -1,9 +1,8 @@
 import _ from 'lodash'
 import { getEvents } from '../selectors'
-import { HubEvent } from '../..'
 
 describe('notification selector tests', () => {
-  const events: HubEvent[] = _.times(2, (x) => ({
+  const events: any[] = _.times(2, (x) => ({
     type: 'SOME_EVENT',
     data: { orderId: `${x}` },
     id: `${x}`,
@@ -18,5 +17,12 @@ describe('notification selector tests', () => {
 
   it('tests getHubEvents selector', () => {
     expect(getEvents(state)).toEqual(events)
+  })
+
+  it('tests getHubEvents selector on empty state', () => {
+    expect(getEvents({})).toEqual([])
+    expect(getEvents(undefined)).toEqual([])
+    expect(getEvents({ eventr: undefined })).toEqual([])
+    expect(getEvents({ eventr: { hubEvents: undefined } })).toEqual([])
   })
 })

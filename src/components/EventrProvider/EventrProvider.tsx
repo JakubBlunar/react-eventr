@@ -1,28 +1,28 @@
 import React, { useState } from 'react'
-import { EventsContext } from '../../context'
-import { HubEvent } from '../..'
 import { createNewEvents } from '../../utils/events'
 
 type Props = {
   bufferSize?: number
+  Provider: React.ComponentType<any>
+  children: React.ReactNode | React.ReactNode[]
 }
 
-export const EventrProvider: React.FC<Props> = ({ children, bufferSize }) => {
-  const [events, setEvents] = useState<HubEvent[]>([])
+export function EventrProvider<T = any>({ children, Provider, bufferSize }: Props) {
+  const [events, setEvents] = useState<any[]>([])
 
   return (
-    <EventsContext.Provider
+    <Provider
       value={{
         hubEvents: events,
-        addEvent: (event: HubEvent) => {
+        addEvent: (event: T) => {
           setEvents(createNewEvents(events, [event], bufferSize || 20))
         },
-        addEvents: (newEvents: HubEvent[]) => {
-          setEvents(createNewEvents(events, newEvents, bufferSize || 20))
+        addEvents: (newEvents: T) => {
+          setEvents(createNewEvents(events, newEvents as any, bufferSize || 20))
         },
       }}
     >
       {children}
-    </EventsContext.Provider>
+    </Provider>
   )
 }

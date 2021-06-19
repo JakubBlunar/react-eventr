@@ -1,7 +1,6 @@
 import _ from 'lodash'
-import { HubEvent } from '..'
 
-export const createNewEvents = (oldEvents: HubEvent[], newEvents: HubEvent[], bufferSize: number) =>
+export const createNewEvents = (oldEvents: any[], newEvents: any[], bufferSize: number) =>
   _.take(
     _.orderBy(
       _.concat(

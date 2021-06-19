@@ -1,3 +1,1 @@
-import { HubEvent } from '..'
-
-export const getEvents = (state: any): HubEvent[] => state?.eventr?.hubEvents || []
+export const getEvents = (state: any): any[] => state?.eventr?.hubEvents || []

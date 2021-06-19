@@ -1,5 +1,5 @@
 import React from 'react'
-import { Example } from '..'
+import { Example } from '../../examples/Example'
 import { render } from '@testing-library/react'
 
 describe('Example Component', () => {

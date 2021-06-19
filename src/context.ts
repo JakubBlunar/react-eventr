@@ -1,15 +1,19 @@
 import _ from 'lodash'
 import React from 'react'
-import { HubEvent } from '.'
 
-type EventsContextValue = {
+export type EventsContextValue<HubEvent> = {
   hubEvents: HubEvent[]
   addEvent: (event: HubEvent) => void
   addEvents: (events: HubEvent[]) => void
 }
 
-export const EventsContext = React.createContext<EventsContextValue>({
-  hubEvents: [],
-  addEvent: _.noop,
-  addEvents: _.noop,
-})
+export function createContext<HubEvent = any>() {
+  const eventsContext = React.createContext<EventsContextValue<HubEvent>>({
+    hubEvents: [],
+    addEvent: _.noop,
+    addEvents: _.noop,
+  })
+  return {
+    eventsContext,
+  }
+}

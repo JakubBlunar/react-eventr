@@ -1,11 +1,19 @@
-import { useContext } from 'react'
-import { EventsContext } from '../context'
+import React, { useContext } from 'react'
+import { EventsContextValue } from '../context'
 
-export function useAddEvent() {
-  const context = useContext(EventsContext)
+export function createAddEventHooks<HubEvent>(
+  reactContext: React.Context<EventsContextValue<HubEvent>>
+) {
+  function useAddEvent() {
+    const context = useContext(reactContext)
+
+    return {
+      addEvent: context.addEvent,
+      addEvents: context.addEvents,
+    }
+  }
 
   return {
-    addEvent: context.addEvent,
-    addEvents: context.addEvents,
+    useAddEvent,
   }
 }

@@ -1,16 +1,20 @@
-import { EventsState } from '../types'
-import { EventRActions, ADD_NEW_EVENT, ADD_NEW_EVENTS } from './actions'
+import { ADD_NEW_EVENT, ADD_NEW_EVENTS } from './actions'
 import _ from 'lodash'
 import { Reducer } from 'redux'
 import { createNewEvents } from '../utils/events'
 
-const initialState: EventsState = {
+export type EventState = {
+  hubEvents: any[]
+}
+
+const initialState: EventState = {
   hubEvents: [],
 }
 
-const notificationReducer: (bufferSize: number) => Reducer<EventsState, EventRActions> = (
-  bufferSize: number
-) => (state = initialState, action) => {
+const notificationReducer: (bufferSize: number) => Reducer<EventState> = (bufferSize: number) => (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
     case ADD_NEW_EVENT:
     case ADD_NEW_EVENTS: {
