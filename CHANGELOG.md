@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.5](https://github.com/JakubBlunar/react-eventr/compare/v1.1.4...v1.1.5) (2021-06-19)
+
+
+### Bug Fixes
+
+* refactored types ([2237a5d](https://github.com/JakubBlunar/react-eventr/commit/2237a5d93db0db845212a960663adb642555957c))
+
 ### [1.1.4](https://github.com/JakubBlunar/react-eventr/compare/v1.1.3...v1.1.4) (2021-06-19)
 
 
