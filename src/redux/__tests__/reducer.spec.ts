@@ -1,7 +1,8 @@
 import _ from 'lodash'
 import { EventsActions } from '../actions'
 import { createEventRReducer } from '../reducer'
-import { HubEvent, NotificationState } from '../../types'
+import { NotificationState } from '../../types'
+import { HubEvent } from '../..'
 
 describe('notifications reducer spec', () => {
   const reducer = createEventRReducer(10)
