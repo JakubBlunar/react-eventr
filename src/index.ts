@@ -5,4 +5,7 @@ export * from './hooks/useEvents'
 
 export type HubEvent = any
 
-export enum HubEventType {}
+export enum HubEventType {
+  TEST_REDUX = 'Test_redux',
+  TEST_REACT = 'Test_react',
+}

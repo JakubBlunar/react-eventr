@@ -6,6 +6,7 @@ import { EventsActions } from '../../redux/actions'
 import { useEvent, useReduxEvent } from '../../hooks/useEvents'
 import { EventrProvider } from '../EventrProvider'
 import { useAddEvent } from '../../hooks/useAddEvent'
+import { HubEventType } from '../..'
 
 export const makeStore = () => {
   const rootReducer = combineReducers({
@@ -17,20 +18,19 @@ export const makeStore = () => {
   return store
 }
 
-const REDUX_EVENT_TYPE = 'redux-event'
-const REACT_EVENT_TYPE = 'react-event'
-
 const Subscriber: React.FC = () => {
   useReduxEvent((event) => {
     alert(event.type)
-  }, REDUX_EVENT_TYPE)
+  }, HubEventType.TEST_REACT)
 
   const { addEvent } = useEvent((event) => {
     alert(event.type)
-  }, REACT_EVENT_TYPE)
+  }, HubEventType.TEST_REACT)
 
   return (
-    <button onClick={() => addEvent({ type: REACT_EVENT_TYPE })}>Add event from subscriber</button>
+    <button onClick={() => addEvent({ type: HubEventType.TEST_REACT })}>
+      Add event from subscriber
+    </button>
   )
 }
 
@@ -44,7 +44,7 @@ const TestComponent: React.FC = () => {
         onClick={() =>
           dispatch(
             EventsActions.addNewEvent({
-              type: REDUX_EVENT_TYPE,
+              type: HubEventType.TEST_REDUX,
             })
           )
         }
@@ -55,7 +55,7 @@ const TestComponent: React.FC = () => {
       <button
         onClick={() =>
           addEvent({
-            type: REACT_EVENT_TYPE,
+            type: HubEventType.TEST_REACT,
           })
         }
       >
