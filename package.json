@@ -31,11 +31,11 @@
   "types": "index.d.ts",
   "dependencies": {},
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "react-redux": ">=7.2.3",
-    "redux": ">=4.0.5",
-    "lodash": ">=4.17.20"
+    "react": "^16 || ^17",
+    "react-dom": "^16 || ^17",
+    "react-redux": "^7.2.3",
+    "redux": "^4.0.5",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "@babel/core": "7.12.7",
