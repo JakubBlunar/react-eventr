@@ -5,13 +5,13 @@
   "private": false,
   "description": "Simple event hub for react",
   "author": "Jakub Blunár",
-  "homepage": "https://github.com/sixfootsixdesigns/React-Library-Boilerplate",
+  "homepage": "https://github.com/JakubBlunar/react-eventr",
   "bugs": {
-    "url": "https://github.com/sixfootsixdesigns/React-Library-Boilerplate/issues"
+    "url": "https://github.com/JakubBlunar/react-eventr/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sixfootsixdesigns/React-Library-Boilerplate.git"
+    "url": "git+https://github.com/JakubBlunar/react-eventr.git"
   },
   "scripts": {
     "build": "cross-env yarn clean && rollup -c",
