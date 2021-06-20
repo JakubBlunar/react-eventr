@@ -8,24 +8,23 @@ export type EventState = {
 }
 
 const initialState: EventState = {
-  hubEvents: [],
+  hubEvents: []
 }
 
-const notificationReducer: (bufferSize: number) => Reducer<EventState> = (bufferSize: number) => (
-  state = initialState,
-  action
-) => {
-  switch (action.type) {
-    case ADD_NEW_EVENT:
-    case ADD_NEW_EVENTS: {
-      return {
-        ...state,
-        hubEvents: createNewEvents(state.hubEvents, action.payload.events, bufferSize),
+const notificationReducer: (bufferSize: number) => Reducer<EventState> =
+  (bufferSize: number) =>
+  (state = initialState, action) => {
+    switch (action.type) {
+      case ADD_NEW_EVENT:
+      case ADD_NEW_EVENTS: {
+        return {
+          ...state,
+          hubEvents: createNewEvents(state.hubEvents, action.payload.events, bufferSize)
+        }
       }
+      default:
+        return state
     }
-    default:
-      return state
   }
-}
 
 export const createEventRReducer = (bufferSize = 20) => notificationReducer(bufferSize)

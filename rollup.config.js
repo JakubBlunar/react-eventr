@@ -16,13 +16,13 @@ export default {
     {
       file: `./dist/${pkg.module}`,
       format: 'es',
-      sourcemap: true,
+      sourcemap: true
     },
     {
       file: `./dist/${pkg.main}`,
       format: 'cjs',
-      sourcemap: true,
-    },
+      sourcemap: true
+    }
   ],
   plugins: [
     resolve(),
@@ -42,18 +42,18 @@ export default {
           'node_modules',
           'bower_components',
           'jspm_packages',
-          'dist',
+          'dist'
         ],
         compilerOptions: {
           sourceMap: true,
-          declaration: true,
-        },
-      },
+          declaration: true
+        }
+      }
     }),
     terser({
       output: {
-        comments: false,
-      },
+        comments: false
+      }
     }),
     copy({
       targets: [
@@ -67,9 +67,9 @@ export default {
               content.toString()
             )
             return JSON.stringify(keep, null, 2)
-          },
-        },
-      ],
-    }),
-  ],
+          }
+        }
+      ]
+    })
+  ]
 }

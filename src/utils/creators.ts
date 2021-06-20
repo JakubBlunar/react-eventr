@@ -19,7 +19,7 @@ export function createReduxModule<HubEventType = string, HubEvent = any>() {
     useReduxEvents,
     addEvents,
     addEvent,
-    EventrActions,
+    EventrActions
   }
 }
 
@@ -33,6 +33,6 @@ export function createReactModule<HubEventType = string, HubEvent = any>() {
     useAddEvent,
     eventsContext,
     useEvent,
-    useEvents,
+    useEvents
   }
 }

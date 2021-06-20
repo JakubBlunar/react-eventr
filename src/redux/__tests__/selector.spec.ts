@@ -6,13 +6,13 @@ describe('notification selector tests', () => {
     type: 'SOME_EVENT',
     data: { orderId: `${x}` },
     id: `${x}`,
-    created: new Date(1994, 24, 5, 7, x),
+    created: new Date(1994, 24, 5, 7, x)
   }))
 
   const state = {
     eventr: {
-      hubEvents: events,
-    },
+      hubEvents: events
+    }
   }
 
   it('tests getHubEvents selector', () => {

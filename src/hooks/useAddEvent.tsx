@@ -9,11 +9,11 @@ export function createAddEventHooks<HubEvent>(
 
     return {
       addEvent: context.addEvent,
-      addEvents: context.addEvents,
+      addEvents: context.addEvents
     }
   }
 
   return {
-    useAddEvent,
+    useAddEvent
   }
 }

@@ -32,7 +32,7 @@ export function createReduxHooks<HubEventType, HubEvent>() {
 
   return {
     useReduxEvents,
-    useReduxEvent,
+    useReduxEvent
   }
 }
 
@@ -66,6 +66,6 @@ export function createReactHooks<HubEventType = string, HubEvent = any>(
 
   return {
     useEvent,
-    useEvents,
+    useEvents
   }
 }

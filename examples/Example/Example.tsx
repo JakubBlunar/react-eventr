@@ -6,12 +6,12 @@ import {
   createReduxModule,
   EventrProvider,
   createEventRReducer,
-  HubEventBase,
+  HubEventBase
 } from '../../src'
 
 const makeStore = () => {
   const rootReducer = combineReducers({
-    eventr: createEventRReducer(),
+    eventr: createEventRReducer()
   })
 
   const store = createStore(rootReducer)
@@ -21,7 +21,7 @@ const makeStore = () => {
 
 enum HubEventType {
   OrderPaid = 'OrderPaid',
-  ConsentAccepted = 'ConsentAccepted',
+  ConsentAccepted = 'ConsentAccepted'
 }
 
 type HubEvent =
@@ -78,8 +78,8 @@ const Subscriber: React.FC = () => {
         addEvent({
           type: HubEventType.OrderPaid,
           data: {
-            orderId: 'OrderId2',
-          },
+            orderId: 'OrderId2'
+          }
         })
       }}
     >
@@ -100,8 +100,8 @@ const TestComponent: React.FC = () => {
             EventrActions.addEvent({
               type: HubEventType.ConsentAccepted,
               data: {
-                productCode: '123456',
-              },
+                productCode: '123456'
+              }
             })
           )
         }
@@ -114,8 +114,8 @@ const TestComponent: React.FC = () => {
           addEvent({
             type: HubEventType.OrderPaid,
             data: {
-              orderId: 'OrderId1',
-            },
+              orderId: 'OrderId1'
+            }
           })
         }}
       >

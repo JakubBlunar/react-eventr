@@ -7,7 +7,7 @@ describe('notifications reducer spec', () => {
 
   const reducer = createEventRReducer(10)
   const initState = {
-    hubEvents: [],
+    hubEvents: []
   }
 
   it('should correctly handle addNewEvents', () => {
@@ -15,7 +15,7 @@ describe('notifications reducer spec', () => {
       type: 'EventDispatched',
       data: { orderId: `${x}` },
       id: `${x}`,
-      created: x == 0 ? new Date() : undefined,
+      created: x == 0 ? new Date() : undefined
     }))
 
     const state = reducer(initState, EventrActions.addEvents(events))
@@ -32,7 +32,7 @@ describe('notifications reducer spec', () => {
       type: 'EventDispatched',
       data: { orderId: '1' },
       id: '1',
-      created: undefined,
+      created: undefined
     }
 
     const state = reducer(initState, EventrActions.addEvent(event))

@@ -13,7 +13,7 @@ export function createActions<HubEvent>() {
     addEvents,
     EventrActions: {
       addEvent,
-      addEvents,
-    },
+      addEvents
+    }
   }
 }

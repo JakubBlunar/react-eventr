@@ -1,7 +1,7 @@
 const rules = {
   ON: 2,
   OFF: 0,
-  WARN: 1,
+  WARN: 1
 }
 
 module.exports = {
@@ -10,9 +10,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
-    sourceType: 'module',
+    sourceType: 'module'
   },
   extends: ['plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'prettier'],
   rules: {
@@ -33,11 +33,11 @@ module.exports = {
     'react-hooks/rules-of-hooks': rules.ON,
     'react-hooks/exhaustive-deps': rules.WARN,
     'prefer-spread': rules.WARN,
-    '@typescript-eslint/ban-ts-comment': rules.OFF,
+    '@typescript-eslint/ban-ts-comment': rules.OFF
   },
   settings: {
     react: {
-      version: 'detect',
-    },
-  },
+      version: 'detect'
+    }
+  }
 }

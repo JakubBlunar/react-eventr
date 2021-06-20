@@ -11,9 +11,9 @@ export function createContext<HubEvent = any>() {
   const eventsContext = React.createContext<EventsContextValue<HubEvent>>({
     hubEvents: [],
     addEvent: _.noop,
-    addEvents: _.noop,
+    addEvents: _.noop
   })
   return {
-    eventsContext,
+    eventsContext
   }
 }

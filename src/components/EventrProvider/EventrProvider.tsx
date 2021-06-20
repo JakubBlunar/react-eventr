@@ -19,7 +19,7 @@ export function EventrProvider<T = any>({ children, Provider, bufferSize }: Prop
         },
         addEvents: (newEvents: T) => {
           setEvents(createNewEvents(events, newEvents as any, bufferSize || 20))
-        },
+        }
       }}
     >
       {children}
