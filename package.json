@@ -141,7 +141,8 @@
           "message": "chore(release): ${nextRelease.version}",
           "assets": [
             "CHANGELOG.md",
-            "README.md"
+            "README.md",
+            "package.json"
           ]
         }
       ]
