@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/JakubBlunar/react-eventr/compare/v1.1.7...v1.2.0) (2021-06-20)
+
+
+### Features
+
+* initial release fix ([386258f](https://github.com/JakubBlunar/react-eventr/commit/386258f770a8530b2775bb6e56e9d34f4dad769b))
+
 ## 1.0.0 (2021-06-20)
 
 
