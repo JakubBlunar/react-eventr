@@ -15,6 +15,7 @@ module.exports = {
     '\\.s?css$': 'identity-obj-proxy'
   },
   testEnvironment: 'jsdom',
+  coverageReporters: ['json-summary', 'text'],
   coverageThreshold: {
     global: {
       branches: 1,

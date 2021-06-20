@@ -1,4 +1,4 @@
-# React-eventr
+# React-eventr ![check-code-coverage](https://img.shields.io/badge/code--coverage-86.44%25-green)
 
 Small library for notifying react components.
 Sometimes you need to notify another components about some event that happens in application. With this library you are able to notify components also from redux.
