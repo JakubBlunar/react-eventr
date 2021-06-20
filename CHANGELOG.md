@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://github.com/JakubBlunar/react-eventr/compare/v1.2.0...v1.2.1) (2021-06-20)
+
+
+### Bug Fixes
+
+* update badge and package.json on relase ([05e7fd1](https://github.com/JakubBlunar/react-eventr/commit/05e7fd1269aae256efdbb8db49c3d0b0f6c7dc83))
+
 ## [1.2.0](https://github.com/JakubBlunar/react-eventr/compare/v1.1.7...v1.2.0) (2021-06-20)
 
 
