@@ -1,19 +1,48 @@
 # React-eventr
 
 Small library for notifying react components.
-Sometimes you need to notify another components about some event that happens in actions. With this library you are able to notify also from redux.
+Sometimes you need to notify another components about some event that happens in application. With this library you are able to notify components also from redux.
+
+Library provides clear api with possibility to strongly typed events.
+For more information look at example.
 
 ## Setup
 
+For typescript first you need to define your event types. These types will come as parameters into creation of eventr module.
+
+```
+enum HubEventType {
+  OrderPaid = 'OrderPaid',
+  ConsentAccepted = 'ConsentAccepted'
+}
+
+type HubEvent =
+  | HubEventBase<HubEventType.OrderPaid, { orderId: string }>
+  | HubEventBase<
+      HubEventType.ConsentAccepted,
+      {
+        productCode: string
+      }
+    >
+```
+
 ### Only react
+
+Import createReactModule into some new file. You will export and import everything you will need from this file.
+For react you will need to use EventrProvider that will store your dispatched events.
 
 ```
 // src/index.ts
-import { EventrProvider } from 'react-eventr'
+import { EventrProvider, createReactModule } from 'react-eventr'
+
+const { useAddEvent, useEvent, eventsContext, useEvents } = createReactModule<
+  HubEventType,
+  HubEvent
+>()
 
 export const Index: React.FC = () => {
   return (
-    <EventrProvider bufferSize={10}>
+    <EventrProvider bufferSize={10} Provider={eventsContext.Provider}>
       <TestComponent />
     </EventrProvider>
   )
@@ -21,18 +50,28 @@ export const Index: React.FC = () => {
 
 // test-component.tsx
 const TestComponent: React.FC = () => {
-  // const { addEvent } = useAddEvent()
+  const { addEvent } = useAddEvent()
 
-  const { addEvent } = useEvent((event) => {
-    alert(event.type, event.data)
-  }, 'some-event')
+  useEvent((event) => {
+    // do something with event
+  }, HubEventType.OrderPaid)
+
+  useEvents((event) => {
+     switch (event.type) {
+        case HubEventType.ConsentAccepted: {
+          // do something when event comes, events are strongly typed
+        }
+      }
+  }, [HubEventType.ConsentAccepted])
 
   return (
     <button
       onClick={() =>
         addEvent({
-          type: 'some-event',
-          data: 'string';
+          type: HubEventType.OrderPaid,
+          data: {
+              orderId: 'OrderId1'
+          }
         })
       }
     >
@@ -44,29 +83,17 @@ const TestComponent: React.FC = () => {
 
 ### With redux
 
+Import createReduxModule into some new file. You will export and import everything you will need from this file.
+For redux you will also need to inject eventr reducer into your reducers.
+
 ```
-import { createEventRReducer, addNewEvent } from 'react-eventr'
+import { createEventRReducer, createReduxModule } from 'react-eventr'
 
-export const makeStore = () => {
-  const rootReducer = combineReducers({
-    eventr: createEventRReducer(10),
-  })
+const rootReducer = combineReducers({
+  eventr: createEventRReducer()
+})
 
-  const store = createStore(rootReducer)
-
-  return store
-}
-
-export const Example: React.FC = () => {
-  const store = makeStore()
-
-  return (
-    <Provider store={store}>
-      <TestComponent />
-    </Provider>
-  )
-}
-
+const { useReduxEvent, EventrActions, useReduxEvents, addEvent } = createReduxModule<HubEventType, HubEvent>()
 
 const TestComponent: React.FC = () => {
   const dispatch = useDispatch()
@@ -77,14 +104,16 @@ const TestComponent: React.FC = () => {
         onClick={() =>
           dispatch(
             addNewEvent({
-              type: 'redux-event',
+              type: HubEventType.ConsentAccepted,
+              data: {
+                productCode: '123456'
+              }
             })
           )
         }
       >
         Dispatch redux Event
       </button>
-
       <Subscriber />
     </>
   )
@@ -92,8 +121,19 @@ const TestComponent: React.FC = () => {
 
 const Subscriber: React.FC = () => {
   useReduxEvent((event) => {
-    alert(event.type)
-  }, 'redux-event')
+    // do something when event comes, events are strongly typed
+  }, HubEventType.ConsentAccepted)
+
+  useReduxEvents(
+    (event) => {
+      switch (event.type) {
+        case HubEventType.ConsentAccepted: {
+          // do something when event comes, events are strongly typed
+        }
+      }
+    },
+    [HubEventType.OrderPaid, HubEventType.ConsentAccepted]
+  )
 
   return null
 }
