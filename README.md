@@ -1,6 +1,6 @@
 # React-eventr
 
-![check-code-coverage](https://img.shields.io/badge/code--coverage-86.44%25-green) ![ts-badge](https://img.shields.io/badge/typescript-friendly-brightgreen) ![npm version](https://badge.fury.io/js/react-eventr.svg)
+![ts-badge](https://img.shields.io/badge/typescript-friendly-brightgreen) ![npm version](https://badge.fury.io/js/react-eventr.svg) ![workflow](https://img.shields.io/github/workflow/status/JakubBlunar/react-eventr/CI) ![check-code-coverage](https://img.shields.io/badge/code--coverage-86.44%25-green) ![typescript](https://img.shields.io/github/languages/top/JakubBlunar/react-eventr)
 
 Small library for notifying react components.
 Sometimes you need to notify another components about some event that happens in application. With this library you are able to notify components also from redux.
