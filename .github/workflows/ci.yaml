@@ -22,6 +22,8 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         run: yarn install
+      - name: Lint code
+        run: yarn lint
       - name: Test code with coverage
         run: yarn test:coverage
       - name: Generate badge
