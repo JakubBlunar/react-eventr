@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { noop } from 'lodash'
 import React from 'react'
 
 export type EventsContextValue<HubEvent> = {
@@ -10,8 +10,8 @@ export type EventsContextValue<HubEvent> = {
 export function createContext<HubEvent = any>() {
   const eventsContext = React.createContext<EventsContextValue<HubEvent>>({
     hubEvents: [],
-    addEvent: _.noop,
-    addEvents: _.noop
+    addEvent: noop,
+    addEvents: noop
   })
   return {
     eventsContext

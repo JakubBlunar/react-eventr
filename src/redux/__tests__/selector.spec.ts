@@ -1,8 +1,8 @@
-import _ from 'lodash'
+import { times } from 'lodash'
 import { getEvents } from '../selectors'
 
 describe('notification selector tests', () => {
-  const events: any[] = _.times(2, (x) => ({
+  const events: any[] = times(2, (x) => ({
     type: 'SOME_EVENT',
     data: { orderId: `${x}` },
     id: `${x}`,

@@ -4765,7 +4765,7 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-check-code-coverage@v1.9.3:
+check-code-coverage@1.9.3:
   version "1.9.3"
   resolved "https://registry.npmjs.org/check-code-coverage/-/check-code-coverage-1.9.3.tgz#d0cb1094c513c9d5472325bf9004248309e691f2"
   integrity sha512-hHst3grP8GN1tXC1/EwGeTuj+O8GDsAUEG46vIFHBaboL6oQevntf/ConMHOcZ1IIIyWduoqtQN7bcLQ3BLA1A==

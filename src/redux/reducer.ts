@@ -1,5 +1,4 @@
 import { ADD_NEW_EVENT, ADD_NEW_EVENTS } from './actions'
-import _ from 'lodash'
 import { Reducer } from 'redux'
 import { createNewEvents } from '../utils/events'
 

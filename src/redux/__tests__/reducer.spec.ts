@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { times } from 'lodash'
 import { createEventRReducer } from '../reducer'
 import { createReduxModule } from '../..'
 
@@ -11,7 +11,7 @@ describe('notifications reducer spec', () => {
   }
 
   it('should correctly handle addNewEvents', () => {
-    const events = _.times(2, (x) => ({
+    const events = times(2, (x) => ({
       type: 'EventDispatched',
       data: { orderId: `${x}` },
       id: `${x}`,
