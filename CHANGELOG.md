@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://github.com/JakubBlunar/react-eventr/compare/v1.2.1...v1.2.2) (2022-07-20)
+
+
+### Bug Fixes
+
+* **release:** trigger 1.2.2 with lodash import changes ([e3cfd25](https://github.com/JakubBlunar/react-eventr/commit/e3cfd2525a20061e4f357bf6d7cff776bc1b670b))
+
 ### [1.2.1](https://github.com/JakubBlunar/react-eventr/compare/v1.2.0...v1.2.1) (2021-06-20)
 
 
