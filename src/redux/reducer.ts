@@ -26,4 +26,4 @@ const notificationReducer: (bufferSize: number) => Reducer<EventState> =
     }
   }
 
-export const createEventRReducer = (bufferSize = 20) => notificationReducer(bufferSize)
+export const createEventRReducer = (bufferSize = 15) => notificationReducer(bufferSize)
