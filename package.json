@@ -5,6 +5,7 @@
   "private": false,
   "description": "Simple event hub for react",
   "author": "Jakub Blunár",
+  "keywords": ["react", "event", "eventr", "react-eventr", "hub"],
   "homepage": "https://github.com/JakubBlunar/react-eventr",
   "bugs": {
     "url": "https://github.com/JakubBlunar/react-eventr/issues"
