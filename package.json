@@ -37,9 +37,6 @@
   "main": "index.js",
   "module": "index.esm.js",
   "types": "index.d.ts",
-  "dependencies": {
-    "source-map-explorer": "2.5.3"
-  },
   "peerDependencies": {
     "lodash": "^4.17.21",
     "react": "^16.8.3 || ^17 || ^18",
@@ -96,6 +93,7 @@
     "rollup-plugin-typescript2": "0.34.1",
     "sass-loader": "10.1.1",
     "semantic-release": "17.3.0",
+    "source-map-explorer": "2.5.3",
     "style-loader": "2.0.0",
     "ts-jest": "27.0.3",
     "ts-loader": "8.3.0",
