@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.4](https://github.com/JakubBlunar/react-eventr/compare/v1.2.3...v1.2.4) (2023-04-15)
+
+
+### Performance Improvements
+
+* removed source maps from build to reduce library size, updated some deps ([8ba2b6f](https://github.com/JakubBlunar/react-eventr/commit/8ba2b6f4ddcb8c50c3f114295520630489d5cf9a))
+
 ### [1.2.3](https://github.com/JakubBlunar/react-eventr/compare/v1.2.2...v1.2.3) (2022-07-20)
 
 
