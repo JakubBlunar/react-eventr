@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.5](https://github.com/JakubBlunar/react-eventr/compare/v1.2.4...v1.2.5) (2023-04-15)
+
+
+### Bug Fixes
+
+* removed source-map-explorer from dependences ([db5310b](https://github.com/JakubBlunar/react-eventr/commit/db5310b748ae297bbcd469c3bd75f430629af0bf))
+
 ### [1.2.4](https://github.com/JakubBlunar/react-eventr/compare/v1.2.3...v1.2.4) (2023-04-15)
 
 
