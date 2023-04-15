@@ -1,4 +1,4 @@
 export { createEventRReducer } from './redux'
 export { EventrProvider } from './components'
 
-export * from './utils/creators'
+export { HubEventBase, createReactModule, createReduxModule } from './utils/creators'

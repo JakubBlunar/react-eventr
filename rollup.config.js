@@ -16,12 +16,10 @@ export default {
     {
       file: `./dist/${pkg.module}`,
       format: 'es',
-      sourcemap: true
     },
     {
       file: `./dist/${pkg.main}`,
       format: 'cjs',
-      sourcemap: true
     }
   ],
   plugins: [
@@ -45,7 +43,6 @@ export default {
           'dist'
         ],
         compilerOptions: {
-          sourceMap: true,
           declaration: true
         }
       }
