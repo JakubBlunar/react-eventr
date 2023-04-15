@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.3](https://github.com/JakubBlunar/react-eventr/compare/v1.2.2...v1.2.3) (2022-07-20)
+
+
+### Performance Improvements
+
+* reduced default buffer size ([052f121](https://github.com/JakubBlunar/react-eventr/commit/052f1216748e8730d7729d6f8e915460c7af8786))
+
 ### [1.2.2](https://github.com/JakubBlunar/react-eventr/compare/v1.2.1...v1.2.2) (2022-07-20)
 
 
